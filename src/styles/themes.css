@@ -1,0 +1,168 @@
+/* Theme 1 - Minimalist Light */
+.theme1 {
+  --primary-color: #2563eb;
+  --secondary-color: #64748b;
+  --background-color: #ffffff;
+  --surface-color: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --font-family: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --border-radius: 8px;
+  --header-height: 80px;
+}
+
+.theme1 {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+}
+
+/* Theme 2 - Dark Sidebar */
+.theme2 {
+  --primary-color: #f59e0b;
+  --secondary-color: #6b7280;
+  --background-color: #111827;
+  --surface-color: #1f2937;
+  --sidebar-color: #374151;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --border-color: #374151;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+  --font-family: 'Playfair Display', serif;
+  --font-size-base: 17px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+  --font-size-2xl: 36px;
+  --spacing-sm: 12px;
+  --spacing-md: 20px;
+  --spacing-lg: 28px;
+  --spacing-xl: 36px;
+  --border-radius: 12px;
+  --header-height: 80px;
+}
+
+.theme2 {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+}
+
+.theme2 .main-content {
+  display: flex;
+  padding-top: var(--header-height);
+}
+
+.theme2 .sidebar {
+  width: 280px;
+  background-color: var(--sidebar-color);
+  min-height: calc(100vh - var(--header-height));
+  padding: var(--spacing-lg);
+  border-right: 1px solid var(--border-color);
+  position: fixed;
+  left: 0;
+  top: var(--header-height);
+  z-index: 10;
+}
+
+.theme2 .content-area {
+  margin-left: 280px;
+  flex: 1;
+  padding: var(--spacing-xl);
+}
+
+/* Theme 3 - Colorful Cards */
+.theme3 {
+  --primary-color: #ec4899;
+  --secondary-color: #8b5cf6;
+  --accent-color: #06b6d4;
+  --background-color: #fef3c7;
+  --surface-color: #ffffff;
+  --card-color: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --border-color: #fbbf24;
+  --shadow: 0 4px 6px -1px rgb(236 72 153 / 0.2), 0 2px 4px -2px rgb(236 72 153 / 0.2);
+  --shadow-lg: 0 20px 25px -5px rgb(236 72 153 / 0.3), 0 8px 10px -6px rgb(236 72 153 / 0.3);
+  --font-family: 'Pacifico', cursive;
+  --font-size-base: 18px;
+  --font-size-lg: 22px;
+  --font-size-xl: 30px;
+  --font-size-2xl: 40px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --border-radius: 20px;
+  --header-height: 80px;
+}
+
+.theme3 {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  min-height: 100vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .theme2 .sidebar {
+    width: 100%;
+    position: relative;
+    min-height: auto;
+    top: 0;
+  }
+  
+  .theme2 .content-area {
+    margin-left: 0;
+  }
+  
+  .theme2 .main-content {
+    flex-direction: column;
+  }
+  
+  :root {
+    --header-height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --header-height: 60px;
+  }
+  
+  .theme1 {
+    --font-size-base: 14px;
+    --font-size-lg: 16px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 26px;
+  }
+  
+  .theme2 {
+    --font-size-base: 15px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 30px;
+  }
+  
+  .theme3 {
+    --font-size-base: 16px;
+    --font-size-lg: 20px;
+    --font-size-xl: 26px;
+    --font-size-2xl: 34px;
+  }
+}
