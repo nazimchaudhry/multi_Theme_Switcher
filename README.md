@@ -2,6 +2,12 @@
 
 A React-based web application featuring a dynamic theme switcher with three distinct themes. Built with TypeScript, React Router, and Context API.
 
+## 🌐 Live Demo
+
+**[View Live Application](https://multi-theme-switcher-chi.vercel.app/)**
+
+Experience the theme switcher in action! Try switching between the three different themes and explore the responsive design across different devices.
+
 ## 🌟 Features
 
 - **Three Unique Themes**: Minimalist Light, Dark Sidebar, and Colorful Cards
